@@ -327,6 +327,8 @@ body[data-page=home] .header.is-scrolled .header-actions,body[data-page=home] .h
  .project-price small { font-size:.75rem; }
 }
 @media(max-width:540px) {
+ .bw-hero-bottom .actions { flex-direction:column; align-items:stretch; }
+ .bw-hero-bottom .btn { width:100%; }
  .bw-projects,.bw-service-grid { grid-template-columns:minmax(0,1fr); }
  .bw-project-card:first-child { grid-column:auto; }
  .bw-project,.bw-project-card:first-child .bw-project { aspect-ratio:1.05; }
