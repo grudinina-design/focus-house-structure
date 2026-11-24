@@ -9,3 +9,4 @@
 @media print{.header,.hero-scroll-cue,.motion-hero-project,.read-progress{display:none}.motion-hero{height:500px;min-height:0}.motion-hero-content{top:60px}.motion-hero-content h1{font-size:64px}.motion-hero-description{font-size:14px}.story-layout{display:block}.story-visual{display:none}.story-step{min-height:0;padding:24px 0;break-inside:avoid}.story-mobile-image{display:block;width:100%;height:200px;object-fit:contain}.footer{display:none}.section{padding-block:24px}.featured-projects .project-card:nth-child(2){padding-top:0}}
 
 @media(min-width:1024px){body[data-page=home] .header.is-scrolled{position:fixed;top:14px}body[data-page=home] .header.is-scrolled .header-inner{height:70px;box-shadow:0 5px 24px #0b2a2512}}
+@media(max-width:1023px){.nav{max-height:calc(100dvh - 82px);overflow-y:auto;overscroll-behavior:contain}}@media(max-width:767px){.nav{max-height:calc(100dvh - 76px)}}
