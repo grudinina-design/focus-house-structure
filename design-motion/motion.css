@@ -684,3 +684,5 @@ body[data-page=home] .header:not(.is-scrolled) .menu-toggle { background:#ffffff
  .service-cell { padding:20px; }
  .process-stage { min-height:0; }
 }
+.process-intro .heading-tone { display:block; }
+.section-head { padding-inline:var(--cell-pad); }
