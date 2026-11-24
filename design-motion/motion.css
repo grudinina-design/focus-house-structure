@@ -44,7 +44,8 @@ input[aria-invalid=true] { border-color:#9c2821; }
 .header .nav a[aria-current=page]:after { display:none; }
 body[data-page=home] .header { position:absolute; top:28px; width:100%; background:transparent; }
 body[data-page=home] .header .brand { color:white; }
-body[data-page=home] .header.is-scrolled { position:fixed; top:8px; pointer-events:none; }
+body[data-page=home] .header.is-scrolled { position:fixed; top:8px; pointer-events:none; transform:translateY(-150%); transition:transform 180ms ease-out; }
+body[data-page=home] .header.is-scrolled.is-visible,body[data-page=home] .header.is-scrolled:focus-within { transform:translateY(0); }
 body[data-page=home] .header.is-scrolled .header-inner { height:72px; }
 body[data-page=home] .header.is-scrolled .brand { color:var(--forest); padding:14px 18px; background:#fffffff2; border-radius:12px; backdrop-filter:blur(16px); pointer-events:auto; }
 body[data-page=home] .header.is-scrolled .header-actions,body[data-page=home] .header.is-scrolled .nav { pointer-events:auto; border-color:var(--line); }
