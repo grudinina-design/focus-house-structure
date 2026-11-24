@@ -77,3 +77,10 @@
  window.addEventListener('popstate',()=>render(new URL(window.location.href).searchParams.get('view')));
  render(new URL(window.location.href).searchParams.get('view'));
 })();
+
+// Resolve initial section links after the buildless page and its font are ready.
+(() => {
+ if(!location.hash)return;
+ function jump(){try{document.getElementById(decodeURIComponent(location.hash.slice(1)))?.scrollIntoView({behavior:'instant',block:'start'});}catch{/* Invalid fragments leave the page at its normal position. */}}
+ if(document.fonts?.ready)document.fonts.ready.then(jump);else jump();
+})();
