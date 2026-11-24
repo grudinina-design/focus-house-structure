@@ -420,8 +420,8 @@ h2.motion-heading { font-size:clamp(36px,3.65vw,70px); }
 body[data-page=home] .header:not(.is-scrolled) .header-actions { color:white; background:#0b2a25d9; border-color:#ffffff4d; }
 body[data-page=home] .header:not(.is-scrolled) .menu-toggle { background:#ffffff14; color:white; }
 @supports ((backdrop-filter:blur(20px)) or (-webkit-backdrop-filter:blur(20px))) {
- .glass-panel { background:rgb(11 42 37 / .42); backdrop-filter:blur(24px) saturate(115%); -webkit-backdrop-filter:blur(24px) saturate(115%); }
- body[data-page=home] .header:not(.is-scrolled) .header-actions { background:rgb(11 42 37 / .26); backdrop-filter:blur(24px) saturate(115%); -webkit-backdrop-filter:blur(24px) saturate(115%); }
+ .glass-panel { background:rgb(11 42 37 / .64); backdrop-filter:blur(24px) saturate(115%); -webkit-backdrop-filter:blur(24px) saturate(115%); }
+ body[data-page=home] .header:not(.is-scrolled) .header-actions { background:rgb(11 42 37 / .64); backdrop-filter:blur(24px) saturate(115%); -webkit-backdrop-filter:blur(24px) saturate(115%); }
 }
 .bw-section-head { align-items:end; margin-block-end:40px; padding-inline:var(--cell-pad); gap:40px; }
 .bw-section-head h2 { max-width:24ch; }
@@ -521,7 +521,7 @@ body[data-page=home] .header:not(.is-scrolled) .menu-toggle { background:#ffffff
 .map-empty p { margin-block:24px 28px; max-width:48ch; color:var(--muted); }
 .map-empty small { color:var(--muted); margin-block-start:24px; }
 @media (hover:hover) {
- body[data-page=home] .header:not(.is-scrolled) .header-projects:hover { background:#ffffff20; }
+ body[data-page=home] .header:not(.is-scrolled) .header-projects:hover { background:#0b2a2533; }
  .choice[aria-pressed=true]:hover { background:var(--yellow); color:var(--forest); }
  .project-open-label { transition:color 160ms; }
  .bw-project:hover .project-open-label { color:#315e4c; }
@@ -686,3 +686,5 @@ body[data-page=home] .header:not(.is-scrolled) .menu-toggle { background:#ffffff
 }
 .process-intro .heading-tone { display:block; }
 .section-head { padding-inline:var(--cell-pad); }
+
+@media(max-width:800px) { .bw-hero-shade { background:linear-gradient(180deg,#0b2a254d 0%,#0b2a258c 18%,#0b2a25bf 40%,#0b2a25e0 100%); } }
