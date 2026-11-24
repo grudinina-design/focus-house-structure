@@ -5,9 +5,11 @@
   const heroImage=document.querySelector('.motion-hero-image');
   const stages=[...document.querySelectorAll('.story-step')];
   const visual=document.querySelector('.story-visual');
+  const header=document.querySelector('.header');
   const progress=document.createElement('div');progress.className='read-progress';progress.setAttribute('aria-hidden','true');document.body.append(progress);
   let frame=null,active=-1;
   function paint(){frame=null;const narrow=window.innerWidth<768;
+    header?.classList.toggle('is-scrolled',window.scrollY>180);
     const limit=document.documentElement.scrollHeight-window.innerHeight;
     progress.style.transform='scaleX('+(limit>0?Math.min(1,Math.max(0,window.scrollY/limit)):0)+')';
     if(hero&&heroImage){if(reduced.matches||narrow){heroImage.style.removeProperty('transform');}else{const y=Math.max(0,Math.min(window.innerHeight,-hero.getBoundingClientRect().top));heroImage.style.transform='translate3d(0,'+(y*.065).toFixed(2)+'px,0) scale(1.035)';}}
