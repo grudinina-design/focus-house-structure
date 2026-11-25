@@ -683,3 +683,19 @@ body[data-page=home] .header:not(.is-scrolled) .menu-toggle { background:#ffffff
 .process-intro .heading-tone { display:block; }
 
 @media(max-width:800px) { .bw-hero-shade { background:linear-gradient(180deg,#0b2a254d 0%,#0b2a258c 18%,#0b2a25bf 40%,#0b2a25e0 100%); } }
+
+/* Extra-work explanations stay in the row, within the shared page gutter. */
+.addon-copy { flex:1; min-width:0; }
+.addon-title { display:flex; align-items:flex-start; gap:4px; }
+.addon-title>label { flex:0 1 auto; min-width:0; padding-block:6px; }
+.addon-row input[type=checkbox] { margin-block-start:8px; }
+.addon-help-toggle { display:inline-flex; justify-content:center; align-items:center; flex:0 0 36px; width:36px; height:36px; padding:6px; border:0; border-radius:50%; color:var(--forest); background:transparent; }
+.addon-help-toggle>span { display:grid; place-items:center; width:24px; height:24px; border:1px solid var(--field-border); border-radius:50%; font-size:14px; font-weight:500; line-height:1; }
+.addon-help-toggle[aria-expanded=true]>span { background:var(--forest); color:white; border-color:var(--forest); }
+.addon-meta { display:block; color:var(--muted); margin-block-start:4px; font-size:.75rem; line-height:1.5; }
+.addon-meta:empty { display:none; }
+.addon-help { margin-block-start:12px; padding:16px; background:var(--surface); border-inline-start:2px solid var(--sage); border-radius:0 8px 8px 0; font-size:.9375rem; line-height:1.6; color:var(--forest); max-width:60ch; overflow-wrap:break-word; }
+.addon-row>strong { padding-block-start:7px; }
+@media(hover:hover) { .addon-help-toggle:hover>span { background:#e1eae4; } .addon-help-toggle[aria-expanded=true]:hover>span { background:var(--forest); } }
+@media(max-width:767px) { .addon-help-toggle { flex-basis:44px; width:44px; height:44px; padding:10px; } .addon-title>label { padding-block:10px; } .addon-row input[type=checkbox] { margin-block-start:12px; } }
+@media(max-width:600px) { .addon-row { display:grid; grid-template-columns:20px minmax(0,1fr); gap:10px 12px; } .addon-copy,.addon-row>.qty,.addon-row>strong { grid-column:2; } .addon-row>.qty { justify-self:start; } .addon-row>strong { padding:0; } .addon-help { padding:14px; font-size:.875rem; } }
