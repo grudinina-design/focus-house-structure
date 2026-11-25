@@ -701,3 +701,21 @@ body[data-page=home] .header:not(.is-scrolled) .menu-toggle { background:#ffffff
 @media(max-width:600px) { .addon-row { display:grid; grid-template-columns:20px minmax(0,1fr); gap:10px 12px; } .addon-copy,.addon-row>.qty,.addon-row>strong { grid-column:2; } .addon-row>.qty { justify-self:start; } .addon-row>strong { padding:0; } .addon-help { padding:14px; font-size:.875rem; } }
 .house-head>div { min-width:0; }
 .addon-help-toggle { scroll-margin-block-end:96px; }
+
+/* One catalog card per family, exact price for its displayed model. */
+.project-card[data-family] { display:flex; flex-direction:column; min-width:0; }
+.project-card[data-family] .project-info { display:flex; flex-direction:column; flex:1; min-width:0; }
+.project-card[data-family] .project-price { margin-block-start:auto; }
+.family-model-caption { font-size:.875rem; line-height:1.5; color:var(--muted); margin-block-start:12px; }
+.family-match-caption { font-size:.75rem; line-height:1.5; color:var(--muted); margin-block:0 0 16px; }
+.model-selector { margin-block:24px; padding-block:24px; border-block:1px solid var(--line); }
+.model-selector h2 { font-size:1rem; font-weight:500; line-height:1.4; text-transform:none; letter-spacing:0; }
+.model-choices { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; margin-block-start:16px; }
+.model-option { position:relative; display:flex; flex-direction:column; justify-content:center; min-width:0; min-height:72px; padding:12px 30px 12px 14px; border:1px solid var(--field-border); border-radius:10px; text-decoration:none; color:var(--forest); background:white; }
+.model-option strong { font-size:.875rem; font-weight:500; line-height:1.4; }
+.model-option small { font-size:.75rem; line-height:1.5; color:var(--muted); margin-block-start:6px; }
+.model-option[aria-current=page] { border-color:var(--forest); box-shadow:inset 0 0 0 1px var(--forest); background:var(--surface); }
+.model-current { position:absolute; inset-inline-end:10px; top:10px; font-size:14px; line-height:1.4; }
+.model-selector>p { margin-block-start:14px; font-size:.75rem; line-height:1.5; color:var(--muted); }
+@media(hover:hover) { .model-option:hover { background:var(--surface); border-color:var(--forest); } }
+@media(max-width:380px) { .model-choices { grid-template-columns:minmax(0,1fr); } }
