@@ -699,3 +699,5 @@ body[data-page=home] .header:not(.is-scrolled) .menu-toggle { background:#ffffff
 @media(hover:hover) { .addon-help-toggle:hover>span { background:#e1eae4; } .addon-help-toggle[aria-expanded=true]:hover>span { background:var(--forest); } }
 @media(max-width:767px) { .addon-help-toggle { flex-basis:44px; width:44px; height:44px; padding:10px; } .addon-title>label { padding-block:10px; } .addon-row input[type=checkbox] { margin-block-start:12px; } }
 @media(max-width:600px) { .addon-row { display:grid; grid-template-columns:20px minmax(0,1fr); gap:10px 12px; } .addon-copy,.addon-row>.qty,.addon-row>strong { grid-column:2; } .addon-row>.qty { justify-self:start; } .addon-row>strong { padding:0; } .addon-help { padding:14px; font-size:.875rem; } }
+.house-head>div { min-width:0; }
+.addon-help-toggle { scroll-margin-block-end:96px; }
